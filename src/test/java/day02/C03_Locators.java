@@ -25,7 +25,7 @@ public class C03_Locators {
 
 
 
-        email_giris.sendKeys("hayrullahdedeler@gmail.com");
+        email_giris.sendKeys("testtechproed@gmail.com");
        password_giris.sendKeys("Test1234!");
 
        WebElement sing_inn = driver.findElement(By.xpath("//*[@id=\"clearance\"]/div/div/form/div[3]/input"));
@@ -33,7 +33,7 @@ public class C03_Locators {
 
        //Expected user id 'testtechproed@gmail.com' mu?
         WebElement kullanici_adi = driver.findElement(By.className("navbar-text"));
-        String userName = "hayrullahdedeler@gmail.com";
+        String userName = "testtechproed@gmail.com";
         if (kullanici_adi.getText().equals(userName)){
             System.out.println("Expected user_id ve getirilen id ayni Test PASSED");
         }else {
@@ -44,10 +44,19 @@ public class C03_Locators {
         System.out.println("Adress linki goruluyor mu?  --> "+address_linki.isEnabled());
 
         //sayfada kac link var ?
-
         List<WebElement> linkler = driver.findElements(By.tagName("a"));
+        System.out.println("link sayisi : "+linkler.size());
 
-        System.out.println("link sayisi : "+linkler.stream().count());
+        //linklerin tum elementleri yazalim foor loop veya foreach ile
+        for (WebElement each:linkler
+             ) {
+            System.out.println(each.getText());
+        }
+        System.out.println("**************************************");
+        linkler.stream().forEach(t-> System.out.println(t.getText()));
+        driver.close();
+
+
 
 
     }
