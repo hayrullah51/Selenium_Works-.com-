@@ -8,5 +8,13 @@ public class C02_NavigationMethods {
 
         System.setProperty("webdriver.chrome.driver","src/resources/drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
+
+        driver.get("https://www.youtube.com/");
+        driver.navigate().to("https://www.amazon.com/");
+        driver.navigate().back();
+        driver.navigate().forward();
+        driver.navigate().refresh();
+        driver.manage().window().maximize();
+        driver.quit();
     }
 }
