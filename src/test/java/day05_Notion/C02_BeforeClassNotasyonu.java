@@ -12,7 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.concurrent.TimeUnit;
 
-public class C02_BeforeNotasyonu {
+public class C02_BeforeClassNotasyonu {
 
     //Amazon sayfasina gidip 3 farkli test method'u hazirlayin
     //Her method'da farkli aramalar yapalim
